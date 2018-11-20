@@ -1,10 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
 ext {
     wirecardEcomLibraryVersion = "3.0.0"
 }
@@ -12,14 +8,6 @@ ext {
 android {
     compileSdkVersion 27
 
-    signingConfigs {
-        release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-        }
-    }
 
 
     defaultConfig {
@@ -43,7 +31,6 @@ android {
             minifyEnabled true
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.release
         }
     }
 
