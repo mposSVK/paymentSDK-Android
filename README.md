@@ -1,1 +1,0 @@
-# paymentSDK-Android
