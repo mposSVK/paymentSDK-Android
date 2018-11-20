@@ -38,7 +38,7 @@ android {
 
 repositories {
     maven {
-        url  "https://dl.bintray.com/wirecard/wirecard-android"
+        url  "https://dl.bintray.com/wirecard/ecom-android"
     }
 }
 
