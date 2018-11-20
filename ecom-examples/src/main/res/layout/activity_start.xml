@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wirecard.ecom.examples.StartActivity">
+
+    <Button
+        android:id="@+id/button_simple_card_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:onClick="makeSimpleCardPayment"
+        android:text="Simple card payment" />
+
+    <Button
+        android:id="@+id/button_animated_card_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_simple_card_payment"
+        android:onClick="makeAnimatedCardPayment"
+        android:text="Animated card payment" />
+
+    <Button
+        android:id="@+id/button_card_form_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:onClick="makeCardFormPayment"
+        android:layout_below="@+id/button_animated_card_payment"
+        android:text="Card form payment" />
+
+    <Button
+        android:id="@+id/button_sepa_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_card_form_payment"
+        android:onClick="makeSepaPayment"
+        android:text="Sepa payment" />
+
+    <Button
+        android:id="@+id/button_paypal_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_sepa_payment"
+        android:onClick="makePaypalPayment"
+        android:text="Paypal payment" />
+
+    <Button
+        android:id="@+id/button_zapp_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_paypal_payment"
+        android:onClick="makeZappPayment"
+        android:text="Zapp payment" />
+
+    <Button
+        android:id="@+id/button_kotlin_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_zapp_payment"
+        android:layout_marginTop="20dp"
+        android:onClick="kotlinDemo"
+        android:text="Kotlin Demo" />
+
+</RelativeLayout>
