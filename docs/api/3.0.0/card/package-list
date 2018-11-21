@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.wirecard.ecom.card
+com.wirecard.ecom.card.model
+com.wirecard.ecom.card.ocr
