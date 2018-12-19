@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Wirecard: Ecom Examples</string>
+
+    <string name="wd_ecom_zapp_scheme">wdecomexample</string>
+    <string name="wd_ecom_zapp_host">open.pbba</string>
+
+    <string name="wd_ecom_card_host">wdecomexample</string>
+    <string name="wd_ecom_card_scheme">open.card</string>
+
+    <string name="wd_ecom_paypal_scheme">wdecomexample</string>
+    <string name="wd_ecom_paypal_host">result.paypal</string>
+    <string name="title_activity_card_form">CardFormActivity</string>
+</resources>

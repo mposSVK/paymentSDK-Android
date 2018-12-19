@@ -1,14 +1,18 @@
 package com.wirecard.ecom.examples
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.google.android.gms.wallet.PaymentData
 import com.wirecard.ecom.Client
 import com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT
 import com.wirecard.ecom.examples.Constants.URL_EE_TEST
+import com.wirecard.ecom.examples.GooglePayActivity.*
 import com.wirecard.ecom.model.out.PaymentResponse
 
 class KotlinStartActivity : AppCompatActivity() {
@@ -52,12 +56,47 @@ class KotlinStartActivity : AppCompatActivity() {
                 .startPayment(mPaymentObjectProvider.payPalPayment)
     }
 
+    fun makeSDKManagedGooglePayPayment(view: View) {
+        Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.googlePayPayment)
+    }
+
+    fun makeMerchantManagedGooglePayPayment(view: View) {
+        startActivityForResult(Intent(this, GooglePayActivity::class.java), GOOGLE_PAY_ACTIVITY_REQUEST_CODE)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
-        val paymentSdkResponse = data.getSerializableExtra(Client.EXTRA_PAYMENT_SDK_RESPONSE)
-        if (paymentSdkResponse is PaymentResponse) {
-            val formattedResponse = ResponseHelper.getFormattedResponse(paymentSdkResponse)
-            Toast.makeText(this, formattedResponse, Toast.LENGTH_SHORT).show()
+
+        if (requestCode == GOOGLE_PAY_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                val paymentData = data.getParcelableExtra<PaymentData>(TAG_PAYMENT_RESPONSE_GOOGLE_PAY)
+                val errorMessage = data.getStringExtra(TAG_ERROR_STATUS)
+                val userCanceled = data.getBooleanExtra(TAG_USER_CANCELED, false)
+                if (paymentData != null) {
+                    val googlePayPayment = mPaymentObjectProvider.getGooglePayPayment(null)
+                    googlePayPayment.paymentData = paymentData
+                    Client(mContext, URL_EE_TEST).startPayment(googlePayPayment)
+                } else if (userCanceled) {
+                    val builder = AlertDialog.Builder(this)
+                            .setTitle("User canceled")
+                            .setPositiveButton("OK") { dialog, which -> dialog.cancel() }
+                    builder.setMessage("User canceled")
+                            .show()
+                } else if (errorMessage != null) {
+                    val builder = AlertDialog.Builder(this)
+                            .setTitle("Error")
+                            .setPositiveButton("OK") { dialog, which -> dialog.cancel() }
+                    builder.setMessage(errorMessage)
+                            .show()
+                }
+            }
+        } else if (requestCode == Client.PAYMENT_SDK_REQUEST_CODE) {
+            val paymentSdkResponse = data.getSerializableExtra(Client.EXTRA_PAYMENT_SDK_RESPONSE)
+            if (paymentSdkResponse is PaymentResponse) {
+                val formattedResponse = ResponseHelper.getFormattedResponse(paymentSdkResponse)
+                Toast.makeText(this, formattedResponse, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

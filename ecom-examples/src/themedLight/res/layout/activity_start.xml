@@ -79,30 +79,6 @@
         android:text="Zapp payment" />
 
     <Button
-        android:id="@+id/button_managed_google_pay_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_zapp_payment"
-        android:onClick="makeSDKManagedGooglePayPayment"
-        android:text="GooglePay payment - SDK managed" />
-
-    <Button
-        android:id="@+id/button_google_pay_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_managed_google_pay_payment"
-        android:onClick="makeMerchantManagedGooglePayPayment"
-        android:text="GooglePay payment - merchant managed" />
-
-    <Button
         android:id="@+id/button_kotlin_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,7 +86,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_google_pay_payment"
+        android:layout_below="@+id/button_zapp_payment"
         android:layout_marginTop="20dp"
         android:onClick="kotlinDemo"
         android:text="Kotlin Demo" />

@@ -30,6 +30,13 @@
             android:label="@string/title_activity_card_form"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity android:name=".GooglePayActivity"
+            android:label="GooglePayActivity"
+            android:theme="@style/WdEcomTheme.Transparent"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
     </application>
 
 </manifest>

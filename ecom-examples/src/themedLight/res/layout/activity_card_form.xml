@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wirecard.ecom.examples.CardFormActivity"
+    tools:showIn="@layout/activity_card_form">
+
+    <FrameLayout
+        android:id="@+id/card_field_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_below="@id/card_field_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmitButtonClicked"
+        android:text="Submit" />
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:background="#33000000"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:gravity="center">
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+</RelativeLayout>

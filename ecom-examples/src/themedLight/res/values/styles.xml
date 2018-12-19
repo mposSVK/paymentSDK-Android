@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="WdEcomToolbarToolbar">
+        <item name="android:background">@drawable/bg_gradient</item>
+    </style>
+
+
+    <style name="WdEcomEditText">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/edittext_custom</item>
+        <item name="showIcon">false</item>
+        <item name="hintAnimationEnabled">false</item>
+
+    </style>
+
+    <style name="WdEcomTextInputLayout">
+    <item name="android:hint">" "</item>
+    </style>
+
+    <style name="WdEcomHeader">
+        <item name="headerSize">auto</item>
+    </style>
+
+
+</resources>

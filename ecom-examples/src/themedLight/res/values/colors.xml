@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wd_ecom_color_main">#FF0000</color>
+    <color name="colorPrimaryDark">@color/wd_ecom_color_main</color>
+    <color name="colorPrimary">@color/wd_ecom_color_main</color>
+    <color name="wd_ecom_color_main_light">#FF7373</color>
+    <color name="wd_ecom_color_main_alpha40">#40FF0000</color>
+    <color name="wd_ecom_color_main_alpha80">#80FF0000</color>
+    <color name="wd_ecom_color_toolbar_text">#FFFFFF</color>
+    <color name="wd_ecom_color_pay_button_text">#FFFFFF</color>
+    <color name="wd_ecom_color_main_background">#FFFFFF</color>
+
+    <color name="wd_ecom_color_error">#FF0000</color>
+
+    <color name="wd_ecom_color_edittext_text_focused">#FF0000</color>
+    <color name="wd_ecom_color_edittext_text_unfocused">#90FF0000</color>
+    <color name="wd_ecom_color_edittext_hint_focused">#CCFF0000</color>
+    <color name="wd_ecom_color_edittext_hint_unfocused">#80FF0000</color>
+
+    <color name="wd_ecom_color_card_gradient_start">#FF0000</color>
+    <color name="wd_ecom_color_card_gradient_end">#40FF0000</color>
+    <color name="wd_ecom_color_card_stroke_start">#FFFFFF</color>
+    <color name="wd_ecom_color_card_stroke_end">#FFFFFF</color>
+    <color name="wd_ecom_color_card_text">#FFFFFF</color>
+
+</resources>

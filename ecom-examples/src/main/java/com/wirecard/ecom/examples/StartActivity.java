@@ -3,17 +3,24 @@ package com.wirecard.ecom.examples;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.wallet.PaymentData;
 import com.wirecard.ecom.Client;
+import com.wirecard.ecom.googlepay.model.GooglePayPayment;
 import com.wirecard.ecom.model.out.PaymentResponse;
 
 import java.io.Serializable;
 
 import static com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT;
 import static com.wirecard.ecom.examples.Constants.URL_EE_TEST;
+import static com.wirecard.ecom.examples.GooglePayActivity.GOOGLE_PAY_ACTIVITY_REQUEST_CODE;
+import static com.wirecard.ecom.examples.GooglePayActivity.TAG_ERROR_STATUS;
+import static com.wirecard.ecom.examples.GooglePayActivity.TAG_PAYMENT_RESPONSE_GOOGLE_PAY;
+import static com.wirecard.ecom.examples.GooglePayActivity.TAG_USER_CANCELED;
 
 public class StartActivity extends AppCompatActivity {
     private Context mContext = this;
@@ -56,6 +63,15 @@ public class StartActivity extends AppCompatActivity {
                 .startPayment(mPaymentObjectProvider.getPayPalPayment());
     }
 
+    public void makeSDKManagedGooglePayPayment(View view){
+        new Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.getGooglePayPayment());
+    }
+
+    public void makeMerchantManagedGooglePayPayment(View view){
+        startActivityForResult(new Intent(this, GooglePayActivity.class), GOOGLE_PAY_ACTIVITY_REQUEST_CODE);
+    }
+
     public void kotlinDemo(View view){
         startActivity(new Intent(mContext, KotlinStartActivity.class));
     }
@@ -63,10 +79,40 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Serializable paymentSdkResponse = data.getSerializableExtra(Client.EXTRA_PAYMENT_SDK_RESPONSE);
-        if (paymentSdkResponse instanceof PaymentResponse) {
-            String formattedResponse = ResponseHelper.getFormattedResponse((PaymentResponse) paymentSdkResponse);
-            Toast.makeText(this, formattedResponse, Toast.LENGTH_SHORT).show();
+
+        if (requestCode == GOOGLE_PAY_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                PaymentData paymentData = data.getParcelableExtra(TAG_PAYMENT_RESPONSE_GOOGLE_PAY);
+                String errorMessage = data.getStringExtra(TAG_ERROR_STATUS);
+                boolean userCanceled = data.getBooleanExtra(TAG_USER_CANCELED, false);
+                if (paymentData != null) {
+                    GooglePayPayment googlePayPayment = mPaymentObjectProvider.getGooglePayPayment(null);
+                    googlePayPayment.setPaymentData(paymentData);
+                    new Client(mContext, URL_EE_TEST).startPayment(googlePayPayment);
+                } else if (userCanceled) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                            .setTitle("User canceled")
+                            .setPositiveButton("OK", (dialog, which) -> {
+                                dialog.cancel();
+                            });
+                    builder.setMessage("User canceled")
+                            .show();
+                } else if (errorMessage != null) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                            .setTitle("Error")
+                            .setPositiveButton("OK", (dialog, which) -> {
+                                dialog.cancel();
+                            });
+                    builder.setMessage(errorMessage)
+                            .show();
+                }
+            }
+        } else if(requestCode == Client.PAYMENT_SDK_REQUEST_CODE) {
+            Serializable paymentSdkResponse = data.getSerializableExtra(Client.EXTRA_PAYMENT_SDK_RESPONSE);
+            if (paymentSdkResponse instanceof PaymentResponse) {
+                String formattedResponse = ResponseHelper.getFormattedResponse((PaymentResponse) paymentSdkResponse);
+                Toast.makeText(this, formattedResponse, Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

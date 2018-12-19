@@ -1,12 +1,13 @@
 package com.wirecard.ecom.examples;
 
+import com.google.android.gms.wallet.PaymentData;
 import com.wirecard.ecom.card.model.CardBundle;
 import com.wirecard.ecom.card.model.CardFieldPayment;
 import com.wirecard.ecom.card.model.CardPayment;
+import com.wirecard.ecom.googlepay.model.GooglePayPayment;
 import com.wirecard.ecom.model.AccountHolder;
 import com.wirecard.ecom.model.Notification;
 import com.wirecard.ecom.model.TransactionType;
-
 import com.wirecard.ecom.paypal.model.PayPalPayment;
 import com.wirecard.ecom.sepa.model.SepaPayment;
 import com.wirecard.ecom.zapp.model.ZappPayment;
@@ -141,5 +142,32 @@ public class PaymentObjectProvider {
 
         zappPayment.setIpAddress("127.0.0.1");
         return zappPayment;
+    }
+
+    public GooglePayPayment getGooglePayPayment(PaymentData paymentData){
+        String timestamp = SignatureHelper.generateTimestamp();
+        String merchantID = "9fcacb0d-b46a-4ce2-867b-6723687fdba1";
+        String secretKey = "bd60d7b0-b5a0-4ffe-b2db-e004a0fce893";
+        String requestID = UUID.randomUUID().toString();
+        TransactionType transactionType = TransactionType.PURCHASE;
+        BigDecimal amount = new BigDecimal(5);
+        String currency = "USD";
+        String signature = SignatureHelper.generateSignature(timestamp, merchantID, requestID, transactionType.getValue(), amount, currency, secretKey);
+
+        GooglePayPayment googlePayPayment = new GooglePayPayment.Builder()
+                .setSignature(signature)
+                .setMerchantAccountId(merchantID)
+                .setRequestId(requestID)
+                .setAmount(amount)
+                .setTransactionType(transactionType)
+                .setCurrency(currency)
+                .setPaymentData(paymentData)
+                .build();
+
+        return googlePayPayment;
+    }
+
+    public GooglePayPayment getGooglePayPayment(){
+        return getGooglePayPayment(null);
     }
 }
