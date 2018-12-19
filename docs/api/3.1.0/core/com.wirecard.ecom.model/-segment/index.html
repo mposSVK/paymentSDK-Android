@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Segment - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">Segment</a><br/>
+<br/>
+<h1>Segment</h1>
+<code><span class="keyword">class </span><span class="identifier">Segment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Segment</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Segment</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Segment</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="arrival-airport-code.html">arrivalAirportCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">arrivalAirportCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The arrival airport code of the itinerary segment. IATA assigns the airport codes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="arrival-city-code.html">arrivalCityCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">arrivalCityCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The arrival city code of the itinerary segment. IATA assigns the airport codes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="arrival-date.html">arrivalDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">arrivalDate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The arrival date of the itinerary segment. IATA assigns the airport codes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="carrier-code.html">carrierCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">carrierCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The 2-letter airline code (e.g. LH, BA, KL) supplied by IATA for each leg of a flight.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="departure-airport-code.html">departureAirportCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">departureAirportCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The departure airport code. IATA assigns the airport codes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="departure-city-code.html">departureCityCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">departureCityCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The departure city code of the itinerary segment. IATA assigns the airport codes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="departure-date.html">departureDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">departureDate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The departure date for a given leg.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fare-basis.html">fareBasis</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fareBasis</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Represents a specific fare and class of service with letters, numbers, or a combination of both.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fare-class.html">fareClass</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fareClass</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Used to distinguish between First Class, Business Class and Economy Class, but also used to distinguish between different fares and booking codes within the same type of service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="flight-number.html">flightNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">flightNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The flight number of the itinerary segment.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stop-over-code.html">stopOverCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">stopOverCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>0 = allowed, 1 = not allowed</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tax-amount.html">taxAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">taxAmount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The amount of the value added tax levied on the transaction amount in the specified currency.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
