@@ -22,7 +22,7 @@ import java.util.UUID;
 import static com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT;
 import static com.wirecard.ecom.examples.Constants.URL_EE_TEST;
 
-public class CardFormActivity extends AppCompatActivity implements Observer<PaymentResponse> {
+public class CardFieldActivity extends AppCompatActivity implements Observer<PaymentResponse> {
     private Context mContext = this;
     private PaymentObjectProvider mPaymentObjectProvider = new PaymentObjectProvider();
     CardFieldFragment cardFieldFragment;
@@ -32,7 +32,9 @@ public class CardFormActivity extends AppCompatActivity implements Observer<Paym
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_form);
 
-        cardFieldFragment = new CardFieldFragment.Builder().build();
+        cardFieldFragment = new CardFieldFragment.Builder()
+                .setRequireManualCardBrandSelection(true)
+                .build();
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.card_field_container, cardFieldFragment)
@@ -48,10 +50,10 @@ public class CardFormActivity extends AppCompatActivity implements Observer<Paym
     }
 
     public void onSubmitButtonClicked(View view) {
-        if(cardFieldFragment.getCardBundle() != null) {
+        if (cardFieldFragment.getCardBundle() != null) {
             new Client(this, URL_EE_TEST, REQUEST_TIMEOUT).startPayment(getCardFormPayment(cardFieldFragment.getCardBundle()));
             findViewById(R.id.progress).setVisibility(View.VISIBLE);
-        }else {
+        } else {
             Toast.makeText(mContext, "Card bundle is null!", Toast.LENGTH_SHORT).show();
         }
     }

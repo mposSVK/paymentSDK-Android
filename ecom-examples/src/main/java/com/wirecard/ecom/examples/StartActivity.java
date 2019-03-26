@@ -47,8 +47,16 @@ public class StartActivity extends AppCompatActivity {
                 .startPayment(mPaymentObjectProvider.getCardPayment(true));
     }
 
-    public void makeCardFormPayment(View view) {
-        startActivity(new Intent(mContext, CardFormActivity.class));
+    public void makeCardFieldPayment(View view) {
+        startActivity(new Intent(mContext, CardFieldActivity.class));
+    }
+
+    public void makeAnimatedCardFieldPayment(View view) {
+        startActivity(new Intent(mContext, AnimatedCardFieldActivity.class));
+    }
+
+    public void makeTokenAnimatedCardFieldPayment(View view){
+        startActivity(new Intent(mContext, TokenAnimatedCardFieldActivity.class));
     }
 
     public void makeZappPayment(View view) {

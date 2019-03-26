@@ -21,12 +21,32 @@
             android:theme="@style/AppTheme"></activity>
 
         <activity
-            android:name=".CardFormActivity"
+            android:name=".CardFieldActivity"
             android:label="@string/title_activity_card_form"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
-            android:name=".KotlinCardFormActivity"
+            android:name=".AnimatedCardFieldActivity"
+            android:label="@string/title_activity_animated_card_form"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".KotlinCardFieldActivity"
+            android:label="@string/title_activity_card_form"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".KotlinAnimatedCardFieldActivity"
+            android:label="@string/title_activity_card_form"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".TokenAnimatedCardFieldActivity"
+            android:label="@string/title_activity_card_form"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".KotlinTokenAnimatedCardFieldActivity"
             android:label="@string/title_activity_card_form"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 

@@ -9,5 +9,6 @@
 
     <string name="wd_ecom_paypal_scheme">wdecomexample</string>
     <string name="wd_ecom_paypal_host">result.paypal</string>
-    <string name="title_activity_card_form">CardFormActivity</string>
+    <string name="title_activity_card_form">CardFieldActivity</string>
+    <string name="title_activity_animated_card_form">AnimatedCardFieldActivity</string>
 </resources>

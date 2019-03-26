@@ -31,16 +31,40 @@
         android:text="Animated card payment" />
 
     <Button
-        android:id="@+id/button_card_form_payment"
+        android:id="@+id/button_card_field_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:onClick="makeCardFormPayment"
+        android:onClick="makeCardFieldPayment"
         android:layout_below="@+id/button_animated_card_payment"
-        android:text="Card form payment" />
+        android:text="Card field payment" />
+
+    <Button
+        android:id="@+id/button_animated_card_field_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:onClick="makeAnimatedCardFieldPayment"
+        android:layout_below="@+id/button_card_field_payment"
+        android:text="Animated Card field payment" />
+
+    <Button
+        android:id="@+id/button_token_animated_card_field_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:onClick="makeTokenAnimatedCardFieldPayment"
+        android:layout_below="@+id/button_animated_card_field_payment"
+        android:text="Token Animated Card field payment" />
 
     <Button
         android:id="@+id/button_sepa_payment"
@@ -50,7 +74,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_card_form_payment"
+        android:layout_below="@+id/button_token_animated_card_field_payment"
         android:onClick="makeSepaPayment"
         android:text="Sepa payment" />
 

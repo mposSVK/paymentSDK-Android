@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wirecard.ecom.examples.CardFormActivity"
+    tools:context="com.wirecard.ecom.examples.CardFieldActivity"
     tools:showIn="@layout/activity_card_form">
 
     <FrameLayout

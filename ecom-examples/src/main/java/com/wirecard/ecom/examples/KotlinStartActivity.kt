@@ -40,8 +40,16 @@ class KotlinStartActivity : AppCompatActivity() {
                 .startPayment(mPaymentObjectProvider.getCardPayment(true))
     }
 
-    fun makeCardFormPayment(view: View) {
-        startActivity(Intent(mContext, KotlinCardFormActivity::class.java))
+    fun makeAnimatedCardFieldPayment(view: View) {
+        startActivity(Intent(mContext, KotlinAnimatedCardFieldActivity::class.java))
+    }
+
+    fun makeTokenAnimatedCardFieldPayment(view: View){
+        startActivity(Intent(mContext, KotlinTokenAnimatedCardFieldActivity::class.java))
+    }
+
+    fun makeCardFieldPayment(view: View) {
+        startActivity(Intent(mContext, KotlinCardFieldActivity::class.java))
     }
 
     fun makeZappPayment(view: View) {

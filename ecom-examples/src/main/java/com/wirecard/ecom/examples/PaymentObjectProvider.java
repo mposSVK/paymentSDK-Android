@@ -58,7 +58,7 @@ public class PaymentObjectProvider {
                 .setTransactionType(transactionType)
                 .setCurrency(currency)
                 .build();
-
+        cardPayment.setRequireManualCardBrandSelection(true);
         cardPayment.setAnimatedCardPayment(isAnimated);
         return cardPayment;
     }

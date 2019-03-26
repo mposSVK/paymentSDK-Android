@@ -12,7 +12,7 @@ import com.wirecard.ecom.examples.Constants.URL_EE_TEST
 import com.wirecard.ecom.model.out.PaymentResponse
 import com.wirecard.ecom.util.Observer
 
-class KotlinCardFormActivity : AppCompatActivity(), Observer<PaymentResponse> {
+class KotlinCardFieldActivity : AppCompatActivity(), Observer<PaymentResponse> {
     private val mContext = this
     private val mPaymentObjectProvider = PaymentObjectProvider()
     private lateinit var cardFieldFragment: CardFieldFragment
@@ -21,7 +21,9 @@ class KotlinCardFormActivity : AppCompatActivity(), Observer<PaymentResponse> {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_form)
 
-        cardFieldFragment = CardFieldFragment.Builder().build()
+        cardFieldFragment = CardFieldFragment.Builder()
+                .setRequireManualCardBrandSelection(true)
+                .build()
         supportFragmentManager
                 .beginTransaction()
                 .add(R.id.card_field_container, cardFieldFragment)
