@@ -6,6 +6,7 @@ import com.wirecard.ecom.card.model.CardFieldPayment;
 import com.wirecard.ecom.card.model.CardPayment;
 import com.wirecard.ecom.googlepay.model.GooglePayPayment;
 import com.wirecard.ecom.model.AccountHolder;
+import com.wirecard.ecom.model.CardToken;
 import com.wirecard.ecom.model.Notification;
 import com.wirecard.ecom.model.TransactionType;
 import com.wirecard.ecom.paypal.model.PayPalPayment;
@@ -60,6 +61,35 @@ public class PaymentObjectProvider {
                 .build();
         cardPayment.setRequireManualCardBrandSelection(true);
         cardPayment.setAnimatedCardPayment(isAnimated);
+        return cardPayment;
+    }
+
+    public CardPayment getCardTokenPayment(){
+        String timestamp = SignatureHelper.generateTimestamp();
+        String merchantID = "9105bb4f-ae68-4768-9c3b-3eda968f57ea";
+        String secretKey = "d1efed51-4cb9-46a5-ba7b-0fdc87a66544";
+        String requestID = UUID.randomUUID().toString();
+        TransactionType transactionType = TransactionType.PURCHASE;
+        BigDecimal amount = new BigDecimal(5);
+        String currency = "EUR";
+        String signature = SignatureHelper.generateSignature(timestamp, merchantID, requestID, transactionType.getValue(), amount, currency, secretKey);
+
+        CardPayment cardPayment = new CardPayment.Builder()
+                .setSignature(signature)
+                .setMerchantAccountId(merchantID)
+                .setRequestId(requestID)
+                .setAmount(amount)
+                .setTransactionType(transactionType)
+                .setCurrency(currency)
+                .build();
+        cardPayment.setRequireManualCardBrandSelection(true);
+
+        CardToken cardToken = new CardToken();
+        cardToken.setTokenId("4304509873471003");
+        cardToken.setMaskedAccountNumber("401200******1003");
+
+        cardPayment.setCardToken(cardToken);
+
         return cardPayment;
     }
 

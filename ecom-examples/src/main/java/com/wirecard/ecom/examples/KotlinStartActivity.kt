@@ -35,6 +35,11 @@ class KotlinStartActivity : AppCompatActivity() {
                 .startPayment(mPaymentObjectProvider.getCardPayment(false))
     }
 
+    fun makeSimpleCardTokenPayment(view: View) {
+        Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.cardTokenPayment)
+    }
+
     fun makeAnimatedCardPayment(view: View) {
         Client(mContext, URL_EE_TEST, REQUEST_TIMEOUT)
                 .startPayment(mPaymentObjectProvider.getCardPayment(true))

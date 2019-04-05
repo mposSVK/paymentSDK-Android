@@ -42,6 +42,11 @@ public class StartActivity extends AppCompatActivity {
                 .startPayment(mPaymentObjectProvider.getCardPayment(false));
     }
 
+    public void makeSimpleCardTokenPayment(View view) {
+        new Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.getCardTokenPayment());
+    }
+
     public void makeAnimatedCardPayment(View view) {
         new Client(mContext, URL_EE_TEST)
                 .startPayment(mPaymentObjectProvider.getCardPayment(true));

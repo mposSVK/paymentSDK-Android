@@ -31,6 +31,18 @@
         android:text="Animated card payment" />
 
     <Button
+        android:id="@+id/button_simple_token_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_animated_card_payment"
+        android:onClick="makeSimpleCardTokenPayment"
+        android:text="Simple card token payment" />
+
+    <Button
         android:id="@+id/button_card_field_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +51,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:onClick="makeCardFieldPayment"
-        android:layout_below="@+id/button_animated_card_payment"
+        android:layout_below="@+id/button_simple_token_payment"
         android:text="Card field payment" />
 
     <Button
