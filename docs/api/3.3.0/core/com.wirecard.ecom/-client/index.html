@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Client - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom</a>&nbsp;/&nbsp;<a href="./index.html">Client</a><br/>
+<br/>
+<h1>Client</h1>
+<code><span class="keyword">class </span><span class="identifier">Client</span></code>
+<p>Main class for starting payments within SDK</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Client</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.Client$<init>(android.content.Context, kotlin.String, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$<init>(android.content.Context, kotlin.String, kotlin.Int)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$<init>(android.content.Context, kotlin.String, kotlin.Int)/requestTimeout">requestTimeout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;30<span class="symbol">)</span></code>
+<p>Creates object of Client</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code>
+<p>Activity context</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-timeout.html">requestTimeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">requestTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Request timeout in seconds (default is set to 30 seconds)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="url.html">url</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">url</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Elastic engine endpoint URL address</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="check-payment.html">checkPayment</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String)/requestId">requestId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="../../com.wirecard.ecom.model/-payment/index.html"><span class="identifier">Payment</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">checkPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.core.ResultListener)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.core.ResultListener)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.core.ResultListener)/requestId">requestId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.Client$checkPayment(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.core.ResultListener)/resultListener">resultListener</span><span class="symbol">:</span>&nbsp;<span class="identifier">ResultListener</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Provides check payment functionality using RxJava functionality</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="start-payment.html">startPayment</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.Client$startPayment(com.wirecard.ecom.model.BasePayment)/payment">payment</span><span class="symbol">:</span>&nbsp;<a href="../../com.wirecard.ecom.model/-base-payment/index.html"><span class="identifier">BasePayment</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts payment action</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-e-x-t-r-a_-p-a-y-m-e-n-t_-s-d-k_-r-e-s-p-o-n-s-e.html">EXTRA_PAYMENT_SDK_RESPONSE</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">EXTRA_PAYMENT_SDK_RESPONSE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-a-y-m-e-n-t_-s-d-k_-r-e-q-u-e-s-t_-c-o-d-e.html">PAYMENT_SDK_REQUEST_CODE</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">PAYMENT_SDK_REQUEST_CODE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
