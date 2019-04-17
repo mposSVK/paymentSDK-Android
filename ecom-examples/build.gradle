@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 ext {
-    wirecardEcomLibraryVersion = "3.3.0"
+    wirecardEcomLibraryVersion = "3.3.1"
 }
 
 android {
