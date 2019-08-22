@@ -8,6 +8,7 @@ import com.wirecard.ecom.googlepay.model.GooglePayPayment;
 import com.wirecard.ecom.model.AccountHolder;
 import com.wirecard.ecom.model.CardToken;
 import com.wirecard.ecom.model.Notification;
+import com.wirecard.ecom.model.Notifications;
 import com.wirecard.ecom.model.TransactionType;
 import com.wirecard.ecom.paypal.model.PayPalPayment;
 import com.wirecard.ecom.sepa.model.SepaPayment;
@@ -140,10 +141,13 @@ public class PaymentObjectProvider {
                 .setRiskReferenceId(null)
                 .build();
 
-        ArrayList<Notification> notifications = new ArrayList<>();
+        Notifications notifications = new Notifications();
+        ArrayList<Notification> notificationList = new ArrayList<>();
         Notification notification = new Notification();
         notification.setUrl("api-test.wirecard.com/engine/mobile/v2/notify");
-        notifications.add(notification);
+        notificationList.add(notification);
+        notifications.setNotifications(notificationList);
+        notifications.setFormat(Notifications.FORMAT_XML);
         payPalPayment.setNotifications(notifications);
 
         return payPalPayment;
