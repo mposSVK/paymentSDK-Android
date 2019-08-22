@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SepaPayment - sepa</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">sepa</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.sepa.model</a>&nbsp;/&nbsp;<a href="./index.html">SepaPayment</a><br/>
+<br/>
+<h1>SepaPayment</h1>
+<code><span class="keyword">class </span><span class="identifier">SepaPayment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-base-payment/index.html"><span class="identifier">BasePayment</span></a></code>
+<p>Sepa payment</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-base-payment/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&gt;</span></code>
+<p>Builder for sepa payment object</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SepaPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/requestTimeStamp">requestTimeStamp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/requestId">requestId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/merchantAccountID">merchantAccountID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/requestSignature">requestSignature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/creditorId">creditorId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/mandateId">mandateId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/mandateSignedDate">mandateSignedDate</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/merchantName">merchantName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/dueDate">dueDate</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/periodic">periodic</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-periodic/index.html"><span class="identifier">Periodic</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/B2B">B2B</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">SepaPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/creditorId">creditorId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/mandateId">mandateId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/mandateSignedDate">mandateSignedDate</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/merchantName">merchantName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/dueDate">dueDate</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/periodic">periodic</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-periodic/index.html"><span class="identifier">Periodic</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.sepa.model.SepaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String, kotlin.String, java.util.Date, kotlin.String, java.util.Date, com.wirecard.ecom.model.Periodic, kotlin.Boolean)/B2B">B2B</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Constructor for v2 payment</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-b2-b.html">B2B</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">B2B</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Setting this value to true means services and products are only available to businesses, the payer cannot be a private individual.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="creditor-id.html">creditorId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">creditorId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The Creditor Id for the Merchant Account SEPA.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="due-date.html">dueDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dueDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>The date that the Mandate Transaction is due.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mandate-id.html">mandateId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mandateId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The Mandate Id for the Mandate Transaction, generated by merchant.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mandate-signed-date.html">mandateSignedDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mandateSignedDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>The date that the Mandate was signed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-name.html">merchantName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>The name used in SEPA legal info text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-action.html">paymentAction</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">paymentAction</span><span class="symbol">: </span><span class="identifier">PaymentAction</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="periodic.html">periodic</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">periodic</span><span class="symbol">: </span><a href="https://wirecard.github.io/paymentSDK-Android/api/3.4.0/core/com.wirecard.ecom.model/-periodic/index.html"><span class="identifier">Periodic</span></a><span class="symbol">?</span></code>
+<p>It describes recurring transactions.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
