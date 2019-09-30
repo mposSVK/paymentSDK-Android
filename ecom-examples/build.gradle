@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 ext {
-    wirecardEcomLibraryVersion = "3.4.0"
+    wirecardEcomLibraryVersion = "3.5.0"
 }
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
 
 
 
@@ -14,7 +14,7 @@ android {
         multiDexEnabled true
         applicationId "com.wirecard.ecom.examples"
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         flavorDimensions "default"
