@@ -1,0 +1,274 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BasePayment - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">BasePayment</a><br/>
+<br/>
+<h1>BasePayment</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BasePayment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Base class of all Payment Methods.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Builder</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-builder/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Default base builder for payment objects</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BasePayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/requestTimeStamp">requestTimeStamp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/requestId">requestId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/merchantAccountID">merchantAccountID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="../-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, kotlin.String)/requestSignature">requestSignature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>Constructor for signature v1 payments
+Deprecated!</p>
+<code><span class="identifier">BasePayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="../-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.BasePayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>Constructor for v2 payment</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="account-holder.html">accountHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accountHolder</span><span class="symbol">: </span><a href="../-customer-data/index.html"><span class="identifier">CustomerData</span></a><span class="symbol">?</span></code>
+<p>Customer's account information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="airline-industry.html">airlineIndustry</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">airlineIndustry</span><span class="symbol">: </span><a href="../-airline-industry/index.html"><span class="identifier">AirlineIndustry</span></a><span class="symbol">?</span></code>
+<p>Airline industry</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="amount.html">amount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">amount</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>The only amount that accompanies the transaction when it is created and/or requested.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="currency.html">currency</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Currency in which the transaction is processed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="descriptor.html">descriptor</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">descriptor</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The description of the transaction that shows up on the Account Holder's statement.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="font-path.html">fontPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fontPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Defines font path for payment forms.
+example: "fonts/myFont.otf"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ip-address.html">ipAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ipAddress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The IP Address of the Customer as recorded by the entity receiving the Transaction Attempt from the Customer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iso-transaction-type.html">isoTransactionType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isoTransactionType</span><span class="symbol">: </span><a href="../-iso-transaction-type/index.html"><span class="identifier">IsoTransactionType</span></a><span class="symbol">?</span></code>
+<p>Identifies the type of transaction being authenticated. The values are derived from ISO 8583.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="locale.html">locale</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">locale</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Defines the user's language and any special variant preferences that the user wants to see in their user interface.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-account-id.html">merchantAccountId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantAccountId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Unique identifier assigned for every Merchant Account.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-account-resolver-category.html">merchantAccountResolverCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantAccountResolverCategory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Category used by frontend merchant to resolve internal merchant for processing payment.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-risk-indicator.html">merchantRiskIndicator</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantRiskIndicator</span><span class="symbol">: </span><a href="../-merchant-risk-indicator/index.html"><span class="identifier">MerchantRiskIndicator</span></a><span class="symbol">?</span></code>
+<p>Merchant's assessment of the level of fraud risk for the specific authentication for both the cardholder and   the authentication being conducted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="native-u-i-locale.html">nativeUILocale</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">nativeUILocale</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Defines locale for payment forms.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notifications.html">notifications</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">notifications</span><span class="symbol">: </span><a href="../-notifications/index.html"><span class="identifier">Notifications</span></a><span class="symbol">?</span></code>
+<p>Notifications configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-detail.html">orderDetail</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderDetail</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Merchant-provided string to store the 'Order Detail' for the Transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-items.html">orderItems</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderItems</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-order-item/index.html"><span class="identifier">OrderItem</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Order Items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-number.html">orderNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Merchant-provided string to store the 'Order Number' for the Transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-transaction-id.html">parentTransactionId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parentTransactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Transaction ID of the first transaction in the series.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-action.html">paymentAction</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">paymentAction</span><span class="symbol">: </span><span class="identifier">PaymentAction</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="request-id.html">requestId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requestId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Unique identifier associated with the transaction, which is created by the merchant.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-signature.html">requestSignature</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><s><span class="identifier">requestSignature</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Authorize client to process the transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-time-stamp.html">requestTimeStamp</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requestTimeStamp</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Date when requestSignature was generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-address.html">shippingAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingAddress</span><span class="symbol">: </span><a href="../-customer-data/index.html"><span class="identifier">CustomerData</span></a><span class="symbol">?</span></code>
+<p>Customer's shipping information</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="signature.html">signature</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">signature</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Authorize client to process the transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transaction-type.html">transactionType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionType</span><span class="symbol">: </span><a href="../-transaction-type/index.html"><span class="identifier">TransactionType</span></a></code>
+<p>Determines transaction processing behaviour.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,516 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Payment - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">Payment</a><br/>
+<br/>
+<h1>Payment</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Payment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Payment object</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Payment</span><span class="symbol">(</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Payment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.Payment$<init>(kotlin.String)/paymentMethod">paymentMethod</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Payment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.Payment$<init>(com.wirecard.ecom.model.BasePayment, kotlin.String)/payment">payment</span><span class="symbol">:</span>&nbsp;<a href="../-base-payment/index.html"><span class="identifier">BasePayment</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.Payment$<init>(com.wirecard.ecom.model.BasePayment, kotlin.String)/paymentMethod">paymentMethod</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="account-holder.html">accountHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accountHolder</span><span class="symbol">: </span><a href="../-account-holder/index.html"><span class="identifier">AccountHolder</span></a><span class="symbol">?</span></code>
+<p>Account holder, object of <a href="../-account-holder/index.html">AccountHolder</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="airline-industry.html">airlineIndustry</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">airlineIndustry</span><span class="symbol">: </span><a href="../-airline-industry/index.html"><span class="identifier">AirlineIndustry</span></a><span class="symbol">?</span></code>
+<p>Airline Industry</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="api-id.html">apiId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">apiId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Api id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="authorization-code.html">authorizationCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authorizationCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Authorization code</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="avs-code.html">avsCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">avsCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Avs code</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="b2b.html">b2b</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">b2b</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>B2B</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bank-account.html">bankAccount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">bankAccount</span><span class="symbol">: </span><a href="../-bank-account/index.html"><span class="identifier">BankAccount</span></a><span class="symbol">?</span></code>
+<p>Bank account, <a href="../-bank-account/index.html">BankAccount</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="browser.html">browser</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">browser</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Browser</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cancel-redirect-url.html">cancelRedirectUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cancelRedirectUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Cance redirect url address</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card.html">card</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">card</span><span class="symbol">: </span><a href="../-card/index.html"><span class="identifier">Card</span></a><span class="symbol">?</span></code>
+<p>Card, <a href="../-card/index.html">Card</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card-token.html">cardToken</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cardToken</span><span class="symbol">: </span><a href="../-card-token/index.html"><span class="identifier">CardToken</span></a><span class="symbol">?</span></code>
+<p>Card token, <a href="../-card-token/index.html">CardToken</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="completion-timestamp.html">completionTimestamp</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">completionTimestamp</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Completion time stamp</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="creditor-id.html">creditorId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">creditorId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Creditor id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cryptogram.html">cryptogram</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cryptogram</span><span class="symbol">: </span><a href="../-cryptogram/index.html"><span class="identifier">Cryptogram</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="csc-code.html">cscCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cscCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Csc code</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-fields.html">customFields</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">customFields</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-custom-field/index.html"><span class="identifier">CustomField</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Custom fields, ArrayList of <a href="../-custom-field/index.html">CustomField</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="descriptor.html">descriptor</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">descriptor</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Descriptor</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="device.html">device</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">device</span><span class="symbol">: </span><a href="../-device/index.html"><span class="identifier">Device</span></a><span class="symbol">?</span></code>
+<p>Device, <a href="../-device/index.html">Device</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="due-date.html">dueDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dueDate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Due date</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fail-redirect-url.html">failRedirectUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">failRedirectUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Fail redirect url address</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="group-transaction-id.html">groupTransactionId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">groupTransactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Group transaction id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="instrument-country.html">instrumentCountry</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">instrumentCountry</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Instrument country</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ip-address.html">ipAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ipAddress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Ip address</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iso-transaction-type.html">isoTransactionType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isoTransactionType</span><span class="symbol">: </span><a href="../-iso-transaction-type/index.html"><span class="identifier">IsoTransactionType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="locale.html">locale</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">locale</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Locale of the request</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mandate.html">mandate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mandate</span><span class="symbol">: </span><a href="../-mandate/index.html"><span class="identifier">Mandate</span></a><span class="symbol">?</span></code>
+<p>Mandate, <a href="../-mandate/index.html">Mandate</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-account-id.html">merchantAccountId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantAccountId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Merchant account id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-account-resolver-category.html">merchantAccountResolverCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantAccountResolverCategory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Merchant account resolver category</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merchant-risk-indicator.html">merchantRiskIndicator</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">merchantRiskIndicator</span><span class="symbol">: </span><a href="../-merchant-risk-indicator/index.html"><span class="identifier">MerchantRiskIndicator</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notifications.html">notifications</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">notifications</span><span class="symbol">: </span><a href="../-notifications/index.html"><span class="identifier">Notifications</span></a><span class="symbol">?</span></code>
+<p>Notifications</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-detail.html">orderDetail</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderDetail</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Order detail</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-items.html">orderItems</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderItems</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-order-item/index.html"><span class="identifier">OrderItem</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Order items, ArrayList of <a href="../-order-item/index.html">OrderItem</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="order-number.html">orderNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">orderNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Order number</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-transaction-amount.html">parentTransactionAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parentTransactionAmount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Parent transaction amount</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-transaction-id.html">parentTransactionId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parentTransactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Parent transaction id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-methods.html">paymentMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">paymentMethods</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-payment-method/index.html"><span class="identifier">PaymentMethod</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Payment methods - ArrayList of <a href="../-payment-method/index.html">PaymentMethod</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="periodic.html">periodic</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">periodic</span><span class="symbol">: </span><a href="../-periodic/index.html"><span class="identifier">Periodic</span></a><span class="symbol">?</span></code>
+<p>Periodic, <a href="../-periodic/index.html">Periodic</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="processing-url.html">processingUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">processingUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Processing redirect url address</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="provider-transaction-id.html">providerTransactionId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">providerTransactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Provider transaction reference id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-id.html">requestId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requestId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Request id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requested-amount.html">requestedAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requestedAmount</span><span class="symbol">: </span><a href="../-requested-amount/index.html"><span class="identifier">RequestedAmount</span></a><span class="symbol">?</span></code>
+<p>Requested amount, object of <a href="../-requested-amount/index.html">RequestedAmount</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="risk-reference-id.html">riskReferenceId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">riskReferenceId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Risk reference id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="self.html">self</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">self</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Self</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settlement.html">settlement</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">settlement</span><span class="symbol">: </span><a href="../-settlement/index.html"><span class="identifier">Settlement</span></a><span class="symbol">?</span></code>
+<p>Settlement, <a href="../-settlement/index.html">Settlement</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping.html">shipping</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shipping</span><span class="symbol">: </span><a href="../-shipping/index.html"><span class="identifier">Shipping</span></a><span class="symbol">?</span></code>
+<p>Shipping, <a href="../-shipping/index.html">Shipping</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="statuses.html">statuses</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">statuses</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-status/index.html"><span class="identifier">Status</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Statuses, ArrayList of <a href="../-status/index.html">Status</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="success-redirect-url.html">successRedirectUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">successRedirectUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Success redirect url address</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="three-d.html">threeD</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">threeD</span><span class="symbol">: </span><a href="../-three-d/index.html"><span class="identifier">ThreeD</span></a><span class="symbol">?</span></code>
+<p>3D secure, <a href="../-three-d/index.html">ThreeD</a> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="token-usage-indicator.html">tokenUsageIndicator</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">tokenUsageIndicator</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Token usage indicator</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transaction-id.html">transactionId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Transaction id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transaction-state.html">transactionState</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionState</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Transaction state</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transaction-type.html">transactionType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Transaction type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="wallet.html">wallet</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">wallet</span><span class="symbol">: </span><a href="../-wallet/index.html"><span class="identifier">Wallet</span></a><span class="symbol">?</span></code>
+<p>Wallet, <a href="../-wallet/index.html">Wallet</a> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
