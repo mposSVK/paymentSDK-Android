@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AccountInfo - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">AccountInfo</a><br/>
+<br/>
+<h1>AccountInfo</h1>
+<code><span class="keyword">class </span><span class="identifier">AccountInfo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AccountInfo</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="authentication-timestamp.html">authenticationTimestamp</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authenticationTimestamp</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date and time in UTC of the   cardholder authentication. Field is limited to 12 characters and   accepted format is YYYYMMDDHHMM</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="authentication-type.html">authenticationType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authenticationType</span><span class="symbol">: </span><a href="../-authentication-type/index.html"><span class="identifier">AuthenticationType</span></a><span class="symbol">?</span></code>
+<p>Mechanism used by the Cardholder   to authenticate to the 3DS Requestor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card-creation-date.html">cardCreationDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cardCreationDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date that the payment account was   enrolled in the cardholder’s account with the 3DS Requestor. Date format must be YYYYMMDD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card-transactions-last-day.html">cardTransactionsLastDay</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cardTransactionsLastDay</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Number of Add Card attempts in the   last 24 hours.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="challenge-indicator.html">challengeIndicator</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">challengeIndicator</span><span class="symbol">: </span><a href="../-challenge-indicator/index.html"><span class="identifier">ChallengeIndicator</span></a><span class="symbol">?</span></code>
+<p>Indicates whether a challenge is   requested for this transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="creation-date.html">creationDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">creationDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date that the cardholder opened the account with the 3DS Requestor. Date format = YYYYMMDD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="password-change-date.html">passwordChangeDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passwordChangeDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date that cardholder’s account   with the 3DS Requestor had a password change or account reset. Date   format must be YYYYMMDD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="purchases-last-six-months.html">purchasesLastSixMonths</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">purchasesLastSixMonths</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Number of purchases with this   cardholder account during the previous six months.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-address-first-use.html">shippingAddressFirstUse</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingAddressFirstUse</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date when the shipping address   used for this transaction was first used with the 3DS Requestor. Date   format must be YYYYMMDD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="suspicious-activity.html">suspiciousActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">suspiciousActivity</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Indicates whether the 3DS   Requestor has experienced suspicious activity(including previous fraud) on   the cardholder account. Accepted values are:
+true -&gt; No suspicious activity   has been observed
+false -&gt; Suspicious activity has   been observed</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transactions-last-day.html">transactionsLastDay</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionsLastDay</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Number of transactions (successful   and abandoned) for this cardholder account with the 3DS Requestor across   all payment accounts in the previous 24 hours.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transactions-last-year.html">transactionsLastYear</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">transactionsLastYear</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Number of transactions (successful   and abandoned) for this cardholder account with the 3DS Requestor across   all payment accounts in the previous year.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-date.html">updateDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">updateDate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code>
+<p>Date that the cardholder’s account   with the 3DS Requestor was last changed. Including Billing or Shipping   address, new payment account, or new user(s) added. Date format = YYYYMMDD.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
