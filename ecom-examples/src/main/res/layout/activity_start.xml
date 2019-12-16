@@ -1,154 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.wirecard.ecom.examples.StartActivity">
 
     <Button
         android:id="@+id/button_simple_card_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
         android:onClick="makeSimpleCardPayment"
         android:text="Simple card payment" />
 
     <Button
         android:id="@+id/button_animated_card_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_simple_card_payment"
         android:onClick="makeAnimatedCardPayment"
         android:text="Animated card payment" />
 
     <Button
         android:id="@+id/button_simple_token_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_animated_card_payment"
         android:onClick="makeSimpleCardTokenPayment"
         android:text="Simple card token payment" />
 
     <Button
         android:id="@+id/button_card_field_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:onClick="makeCardFieldPayment"
-        android:layout_below="@+id/button_simple_token_payment"
         android:text="Card field payment" />
 
     <Button
         android:id="@+id/button_animated_card_field_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:onClick="makeAnimatedCardFieldPayment"
-        android:layout_below="@+id/button_card_field_payment"
         android:text="Animated Card field payment" />
 
     <Button
         android:id="@+id/button_token_animated_card_field_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:onClick="makeTokenAnimatedCardFieldPayment"
-        android:layout_below="@+id/button_animated_card_field_payment"
         android:text="Token Animated Card field payment" />
 
     <Button
-        android:id="@+id/button_sepa_payment"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_fragment_card_field_payment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_token_animated_card_field_payment"
+        android:onClick="makeFragmentCardFieldPayment"
+        android:text="Fragment Card field payment" />
+
+    <Button
+        android:id="@+id/button_sepa_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="makeSepaPayment"
         android:text="Sepa payment" />
 
     <Button
         android:id="@+id/button_paypal_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_sepa_payment"
         android:onClick="makePaypalPayment"
         android:text="Paypal payment" />
 
     <Button
         android:id="@+id/button_zapp_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_paypal_payment"
         android:onClick="makeZappPayment"
         android:text="Zapp payment" />
 
     <Button
         android:id="@+id/button_managed_google_pay_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_zapp_payment"
         android:onClick="makeSDKManagedGooglePayPayment"
         android:text="GooglePay payment - SDK managed" />
 
     <Button
         android:id="@+id/button_google_pay_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_managed_google_pay_payment"
         android:onClick="makeMerchantManagedGooglePayPayment"
         android:text="GooglePay payment - merchant managed" />
 
     <Button
-        android:id="@+id/button_kotlin_example"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_optional_parameters"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_google_pay_payment"
+        android:onClick="makeCardPaymentWithOptionalParameters"
+        android:text="Optional parameters example" />
+
+    <Button
+        android:id="@+id/button_kotlin_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="kotlinDemo"
         android:text="Kotlin Demo" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -9,12 +9,14 @@ import com.wirecard.ecom.Client
 import com.wirecard.ecom.card.CardFieldFragment
 import com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT
 import com.wirecard.ecom.examples.Constants.URL_EE_TEST
+import com.wirecard.ecom.examples.providers.OptionalFieldsProvider
+import com.wirecard.ecom.examples.providers.PaymentObjectProvider
 import com.wirecard.ecom.model.out.PaymentResponse
 import com.wirecard.ecom.util.Observer
 
 class KotlinCardFieldActivity : AppCompatActivity(), Observer<PaymentResponse> {
     private val mContext = this
-    private val mPaymentObjectProvider = PaymentObjectProvider()
+    private val mPaymentObjectProvider = PaymentObjectProvider(OptionalFieldsProvider())
     private lateinit var cardFieldFragment: CardFieldFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {

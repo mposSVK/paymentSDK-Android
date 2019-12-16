@@ -1,11 +1,13 @@
-package com.wirecard.ecom.examples;
+package com.wirecard.ecom.examples.providers;
 
 import com.google.android.gms.wallet.PaymentData;
 import com.wirecard.ecom.card.model.CardBundle;
 import com.wirecard.ecom.card.model.CardFieldPayment;
 import com.wirecard.ecom.card.model.CardPayment;
+import com.wirecard.ecom.examples.SignatureHelper;
 import com.wirecard.ecom.googlepay.model.GooglePayPayment;
 import com.wirecard.ecom.model.AccountHolder;
+import com.wirecard.ecom.model.Card;
 import com.wirecard.ecom.model.CardToken;
 import com.wirecard.ecom.model.Notification;
 import com.wirecard.ecom.model.Notifications;
@@ -19,6 +21,11 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class PaymentObjectProvider {
+    OptionalFieldsProvider optionalFieldsProvider;
+
+    public PaymentObjectProvider(OptionalFieldsProvider optionalFieldsProvider){
+        this.optionalFieldsProvider = optionalFieldsProvider;
+    }
 
     public SepaPayment getSepaPaymentObject() {
         String timestamp = SignatureHelper.generateTimestamp();
@@ -39,10 +46,17 @@ public class PaymentObjectProvider {
                 .setCurrency(currency)
                 .setMerchantName("JOHN DOE")
                 .build();
-
     }
 
-    public CardPayment getCardPayment(boolean isAnimated) {
+    public CardPayment getCardPaymentWithOptionalData(){
+        return optionalFieldsProvider.appendCardOptionalData(getCardPayment(false, false));
+    }
+
+    public CardPayment getCardPayment(boolean isAnimated){
+        return this.getCardPayment(isAnimated, true);
+    }
+
+    public CardPayment getCardPayment(boolean isAnimated, boolean append3dsV2Fields) {
         String timestamp = SignatureHelper.generateTimestamp();
         String merchantID = "33f6d473-3036-4ca5-acb5-8c64dac862d1";
         String secretKey = "9e0130f6-2e1e-4185-b0d5-dc69079c75cc";
@@ -62,7 +76,9 @@ public class PaymentObjectProvider {
                 .build();
         cardPayment.setRequireManualCardBrandSelection(true);
         cardPayment.setAnimatedCardPayment(isAnimated);
-        return cardPayment;
+        if(append3dsV2Fields)
+            return (CardPayment) optionalFieldsProvider.appendThreeDSV2Fields(cardPayment);
+        else return cardPayment;
     }
 
     public CardPayment getCardTokenPayment(){
@@ -96,8 +112,8 @@ public class PaymentObjectProvider {
 
     public CardFieldPayment getCardFormPayment(CardBundle cardBundle) {
         String timestamp = SignatureHelper.generateTimestamp();
-        String merchantID = "33f6d473-3036-4ca5-acb5-8c64dac862d1";
-        String secretKey = "9e0130f6-2e1e-4185-b0d5-dc69079c75cc";
+        String merchantID = "cad16b4a-abf2-450d-bcb8-1725a4cef443";
+        String secretKey = "b3b131ad-ea7e-48bc-9e71-78d0c6ea579d";
         String requestID = UUID.randomUUID().toString();
         TransactionType transactionType = TransactionType.PURCHASE;
         BigDecimal amount = new BigDecimal(5);
@@ -114,10 +130,12 @@ public class PaymentObjectProvider {
                 .setCardBundle(cardBundle)
                 .build();
 
+        cardFieldPayment.setAttempt3d(true);
+
         AccountHolder accountHolder = new AccountHolder("John", "Doe");
         cardFieldPayment.setAccountHolder(accountHolder);
 
-        return cardFieldPayment;
+        return (CardFieldPayment) optionalFieldsProvider.appendThreeDSV2Fields(cardFieldPayment);
     }
 
     public PayPalPayment getPayPalPayment(){
@@ -142,11 +160,11 @@ public class PaymentObjectProvider {
                 .build();
 
         Notifications notifications = new Notifications();
-        ArrayList<Notification> notificationList = new ArrayList<>();
+        ArrayList<Notification> list = new ArrayList<>();
         Notification notification = new Notification();
         notification.setUrl("api-test.wirecard.com/engine/mobile/v2/notify");
-        notificationList.add(notification);
-        notifications.setNotifications(notificationList);
+        list.add(notification);
+        notifications.setNotifications(list);
         notifications.setFormat(Notifications.FORMAT_XML);
         payPalPayment.setNotifications(notifications);
 

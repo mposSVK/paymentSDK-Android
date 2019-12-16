@@ -10,10 +10,26 @@ import android.widget.Toast;
 
 import com.google.android.gms.wallet.PaymentData;
 import com.wirecard.ecom.Client;
+import com.wirecard.ecom.card.model.CardPayment;
+import com.wirecard.ecom.examples.providers.OptionalFieldsProvider;
+import com.wirecard.ecom.examples.providers.PaymentObjectProvider;
 import com.wirecard.ecom.googlepay.model.GooglePayPayment;
+import com.wirecard.ecom.model.AccountHolder;
+import com.wirecard.ecom.model.Address;
+import com.wirecard.ecom.model.CustomerData;
+import com.wirecard.ecom.model.LoyaltyCard;
+import com.wirecard.ecom.model.Notification;
+import com.wirecard.ecom.model.Notifications;
+import com.wirecard.ecom.model.OrderItem;
+import com.wirecard.ecom.model.RequestedAmount;
+import com.wirecard.ecom.model.Shipping;
+import com.wirecard.ecom.model.ShippingMethod;
 import com.wirecard.ecom.model.out.PaymentResponse;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT;
 import static com.wirecard.ecom.examples.Constants.URL_EE_TEST;
@@ -24,7 +40,7 @@ import static com.wirecard.ecom.examples.GooglePayActivity.TAG_USER_CANCELED;
 
 public class StartActivity extends AppCompatActivity {
     private Context mContext = this;
-    private PaymentObjectProvider mPaymentObjectProvider = new PaymentObjectProvider();
+    private PaymentObjectProvider mPaymentObjectProvider = new PaymentObjectProvider(new OptionalFieldsProvider());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +78,15 @@ public class StartActivity extends AppCompatActivity {
 
     public void makeTokenAnimatedCardFieldPayment(View view){
         startActivity(new Intent(mContext, TokenAnimatedCardFieldActivity.class));
+    }
+
+    public void makeFragmentCardFieldPayment(View view){
+        startActivity(new Intent(mContext, KotlinCardFieldFragmentImplActivity.class));
+    }
+
+    public void makeCardPaymentWithOptionalParameters(View view){
+        new Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.getCardPaymentWithOptionalData());
     }
 
     public void makeZappPayment(View view) {

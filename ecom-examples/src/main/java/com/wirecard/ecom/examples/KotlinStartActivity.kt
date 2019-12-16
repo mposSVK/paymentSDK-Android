@@ -13,11 +13,13 @@ import com.wirecard.ecom.Client
 import com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT
 import com.wirecard.ecom.examples.Constants.URL_EE_TEST
 import com.wirecard.ecom.examples.GooglePayActivity.*
+import com.wirecard.ecom.examples.providers.OptionalFieldsProvider
+import com.wirecard.ecom.examples.providers.PaymentObjectProvider
 import com.wirecard.ecom.model.out.PaymentResponse
 
 class KotlinStartActivity : AppCompatActivity() {
     private val mContext = this
-    private val mPaymentObjectProvider = PaymentObjectProvider()
+    private val mPaymentObjectProvider = PaymentObjectProvider(OptionalFieldsProvider())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,15 @@ class KotlinStartActivity : AppCompatActivity() {
     fun makeSimpleCardPayment(view: View) {
         Client(mContext, URL_EE_TEST,  REQUEST_TIMEOUT)
                 .startPayment(mPaymentObjectProvider.getCardPayment(false))
+    }
+
+    fun makeFragmentCardFieldPayment(view: View?) {
+        startActivity(Intent(mContext, KotlinCardFieldFragmentImplActivity::class.java))
+    }
+
+    fun makeCardPaymentWithOptionalParameters(view: View) {
+        Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.cardPaymentWithOptionalData)
     }
 
     fun makeSimpleCardTokenPayment(view: View) {
