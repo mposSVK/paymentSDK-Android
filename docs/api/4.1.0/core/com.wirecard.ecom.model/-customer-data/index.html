@@ -1,0 +1,240 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomerData - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">CustomerData</a><br/>
+<br/>
+<h1>CustomerData</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CustomerData</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Customer data</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CustomerData</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String)/firstName">firstName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String)/lastName">lastName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">CustomerData</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/firstName">firstName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/lastName">lastName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/email">email</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/phone">phone</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/gender">gender</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/dateOfBirth">dateOfBirth</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.CustomerData$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.Address)/address">address</span><span class="symbol">:</span>&nbsp;<a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">CustomerData</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="address.html">address</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">address</span><span class="symbol">: </span><a href="../-address/index.html"><span class="identifier">Address</span></a><span class="symbol">?</span></code>
+<p>Address object of <a href="../-address/index.html">Address</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="date-of-birth.html">dateOfBirth</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dateOfBirth</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Date of birth</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="email.html">email</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">email</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Email</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="first-name.html">firstName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">firstName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>First name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gender.html">gender</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">gender</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Gender</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="home-phone.html">homePhone</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">homePhone</span><span class="symbol">: </span><a href="../-phone/index.html"><span class="identifier">Phone</span></a><span class="symbol">?</span></code>
+<p>The home phone provided by the   Cardholder.
+Refer to ITU-E.164 for additional information on format and length.
+This field is required if available, unless market or regional mandate   restricts sending this information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last-name.html">lastName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">lastName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Last name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mobile-phone.html">mobilePhone</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mobilePhone</span><span class="symbol">: </span><a href="../-phone/index.html"><span class="identifier">Phone</span></a><span class="symbol">?</span></code>
+<p>The mobile phone provided by the   Cardholder.
+Refer to ITU-E.164 for additional information on format and length.
+This field is required if available, unless market or regional mandate   restricts sending this information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="phone.html">phone</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">phone</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Phone number</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-city.html">shippingCity</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingCity</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>City portion of the shipping   address requested by the Cardholder.
+This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-country.html">shippingCountry</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingCountry</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Country of the shipping address   requested by the Cardholder.
+This field is limited to 3 characters. This value shall be the ISO   3166-1 numeric country code, except values from range 901 - 999 which are   reserved by ISO.
+This field is required if Cardholder Shipping Address State is present and if   shipping information are not the same as billing information. This field   can be omitted if market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-postal-code.html">shippingPostalCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingPostalCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>ZIP or other postal code of the   shipping address associated with the card used for this purchase.
+This field is limited to maximum 16 characters.
+This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-state.html">shippingState</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingState</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The state or province of the   shipping address associated with the card used for this purchase.
+This field is limited to 3 characters. The value should be the country   subtivision code defined in ISO 3166-2.
+This field is required unless shipping information is the same as billing   information, or State is not applicable for this country, or market or   regional mandate restricts sending this information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-street1.html">shippingStreet1</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingStreet1</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>First line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+This field is limited to maximum 50 characters.
+This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-street2.html">shippingStreet2</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingStreet2</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Second line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+This field is limited to maximum 50 characters.
+This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shipping-street3.html">shippingStreet3</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shippingStreet3</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Third line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+This field is limited to maximum 50 characters.
+This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="work-phone.html">workPhone</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workPhone</span><span class="symbol">: </span><a href="../-phone/index.html"><span class="identifier">Phone</span></a><span class="symbol">?</span></code>
+<p>The work phone provided by the   Cardholder.
+Refer to ITU-E.164 for additional information on format and length.
+This field is required if available, unless market or regional mandate   restricts sending this information.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-account-holder/index.html">AccountHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AccountHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CustomerData</span></a></code>
+<p>Account holder</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-shipping/index.html">Shipping</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Shipping</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CustomerData</span></a></code>
+<p>Shipping</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

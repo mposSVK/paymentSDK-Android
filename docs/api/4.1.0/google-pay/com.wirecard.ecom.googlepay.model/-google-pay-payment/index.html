@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GooglePayPayment - google-pay</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">google-pay</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.googlepay.model</a>&nbsp;/&nbsp;<a href="./index.html">GooglePayPayment</a><br/>
+<br/>
+<h1>GooglePayPayment</h1>
+<code><span class="keyword">class </span><span class="identifier">GooglePayPayment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.model/-base-payment/index.html"><span class="identifier">BasePayment</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.model/-base-payment/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GooglePayPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/signature">signature</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.model/-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/currency">currency</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.googlepay.model.GooglePayPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.google.android.gms.wallet.PaymentData)/paymentData">paymentData</span><span class="symbol">:</span>&nbsp;<span class="identifier">PaymentData</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="environment.html">environment</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">environment</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>GooglePay environment - use one of following <a href="#">WalletConstants.ENVIRONMENT_TEST</a>, <a href="#">WalletConstants.ENVIRONMENT_PRODUCTION</a>
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="google-pay-ui-theme.html">googlePayUiTheme</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">googlePayUiTheme</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>GooglePay UI related - theme of user interface - use one of following <a href="#">WalletConstants.THEME_DARK</a>, <a href="#">WalletConstants.THEME_LIGHT</a>
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-action.html">paymentAction</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">paymentAction</span><span class="symbol">: </span><span class="identifier">PaymentAction</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-data.html">paymentData</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">paymentData</span><span class="symbol">: </span><span class="identifier">PaymentData</span><span class="symbol">?</span></code>
+<p>Payment Data as a response from Google Pay in case you will do the UI on your own</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="require-billing-address.html">requireBillingAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requireBillingAddress</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>GooglePay UI related - whether billing address is required or not, true by default
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="require-email-address.html">requireEmailAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requireEmailAddress</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>GooglePay UI related - whether email address is required or not, true by default
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="require-phone-number.html">requirePhoneNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requirePhoneNumber</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>GooglePay UI related - whether phone number is required or not, true by default
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="require-shipping-address.html">requireShippingAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requireShippingAddress</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>GooglePay UI related - whether shipping address is required or not, true by default
+Not valid if payment data provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="supported-card-brands.html">supportedCardBrands</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">supportedCardBrands</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/index.html"><span class="identifier">CardBrand</span></a><span class="symbol">&gt;</span></code>
+<p>List of supported card brands, select one or several from <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-v-i-s-a/index.html">CardBrand.VISA</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-m-a-s-t-e-r-c-a-r-d/index.html">CardBrand.MASTERCARD</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-a-m-e-x/index.html">CardBrand.AMEX</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-d-i-n-e-r-s/index.html">CardBrand.DINERS</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-d-i-s-c-o-v-e-r/index.html">CardBrand.DISCOVER</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-c-u-p/index.html">CardBrand.CUP</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-j-c-b/index.html">CardBrand.JCB</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-u-a-t-p/index.html">CardBrand.UATP</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-m-a-e-s-t-r-o/index.html">CardBrand.MAESTRO</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-u-z-c-a-r-d/index.html">CardBrand.UZCARD</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-m-i-r/index.html">CardBrand.MIR</a>, <a href="https://wirecard.github.io/paymentSDK-Android/api/4.1.0/core/com.wirecard.ecom.cardbrand/-card-brand/-a-r-c-a/index.html">CardBrand.ARCA</a>
+All of them are supported by default
+Not valid if payment data provided</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
