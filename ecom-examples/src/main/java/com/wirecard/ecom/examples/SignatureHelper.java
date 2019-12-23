@@ -26,6 +26,10 @@ public class SignatureHelper {
                 .toString();
     }
 
+    /**
+     *  Sample for generating signature according to input
+     *  Note that signature should be generated server side and should not be generated in the app because of security matters
+     */
     public static String generateSignature(String timestamp, String merchantID, String requestID,
                                            String transactionType, BigDecimal amount, String currency, String secretKey) {
 

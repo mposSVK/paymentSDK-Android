@@ -64,6 +64,8 @@ public class PaymentObjectProvider {
         TransactionType transactionType = TransactionType.PURCHASE;
         BigDecimal amount = new BigDecimal(5);
         String currency = "EUR";
+
+        // Application shall get signature from server where signature shall be computed
         String signature = SignatureHelper.generateSignature(timestamp, merchantID, requestID, transactionType.getValue(), amount, currency, secretKey);
 
         CardPayment cardPayment = new CardPayment.Builder()
