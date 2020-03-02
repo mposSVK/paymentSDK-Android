@@ -164,7 +164,7 @@ public class PaymentObjectProvider {
         Notifications notifications = new Notifications();
         ArrayList<Notification> list = new ArrayList<>();
         Notification notification = new Notification();
-        notification.setUrl("api-test.wirecard.com/engine/mobile/v2/notify");
+        notification.setUrl("https://api-test.wirecard.com/engine/mobile/v2/notify");
         list.add(notification);
         notifications.setNotifications(list);
         notifications.setFormat(Notifications.FORMAT_XML);

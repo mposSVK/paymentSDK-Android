@@ -74,6 +74,10 @@ class KotlinStartActivity : AppCompatActivity() {
                 .startPayment(mPaymentObjectProvider.zappPayment)
     }
 
+    fun makeLoyaltyCard(view: View?) {
+        startActivity(Intent(mContext, KotlinLoyaltyCardFieldActivity::class.java))
+    }
+
     fun makePaypalPayment(view: View) {
         // Do not forget to add wd_ecom_paypal_scheme and wd_ecom_paypal_host to your string file and initialise it!
         Client(mContext, URL_EE_TEST, REQUEST_TIMEOUT)

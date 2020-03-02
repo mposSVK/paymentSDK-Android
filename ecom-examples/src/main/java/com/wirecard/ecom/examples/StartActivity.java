@@ -110,6 +110,10 @@ public class StartActivity extends AppCompatActivity {
         startActivityForResult(new Intent(this, GooglePayActivity.class), GOOGLE_PAY_ACTIVITY_REQUEST_CODE);
     }
 
+    public void makeLoyaltyCard(View view){
+        startActivity(new Intent(mContext, KotlinLoyaltyCardFieldActivity.class));
+    }
+
     public void kotlinDemo(View view){
         startActivity(new Intent(mContext, KotlinStartActivity.class));
     }

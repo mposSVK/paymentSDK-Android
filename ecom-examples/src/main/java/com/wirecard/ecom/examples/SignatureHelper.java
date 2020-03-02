@@ -34,13 +34,16 @@ public class SignatureHelper {
                                            String transactionType, BigDecimal amount, String currency, String secretKey) {
 
 
-        String payload = (ENCRYPTION_ALGORITHM.toUpperCase() + "\n" +
+        String payload = ENCRYPTION_ALGORITHM.toUpperCase() + "\n" +
                 "request_time_stamp=" + timestamp + "\n" +
                 "merchant_account_id=" + merchantID + "\n" +
                 "request_id=" + requestID + "\n" +
-                "transaction_type=" + transactionType + "\n" +
-                "requested_amount=" + amount + "\n" +
-                "requested_amount_currency=" + currency.toUpperCase());
+                "transaction_type=" + transactionType;
+        if(amount != null && currency != null){
+            payload +=  "\n" +"requested_amount=" + amount +
+                        "\n" + "requested_amount_currency=" + currency.toUpperCase();
+        }
+
         try {
             byte[] encryptedPayload = encryptSignature(payload, secretKey);
             return new String(Base64.encode(payload.getBytes(UTF_8), Base64.NO_WRAP), UTF_8)

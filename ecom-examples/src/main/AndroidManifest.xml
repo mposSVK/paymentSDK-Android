@@ -59,6 +59,9 @@
         <activity android:name=".GooglePayActivity"
             android:label="GooglePayActivity"
             android:theme="@style/WdEcomTheme.Transparent"></activity>
+        <activity
+            android:name=".KotlinLoyaltyCardFieldActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
