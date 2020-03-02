@@ -3,33 +3,19 @@ package com.wirecard.ecom.examples;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.wallet.PaymentData;
 import com.wirecard.ecom.Client;
-import com.wirecard.ecom.card.model.CardPayment;
 import com.wirecard.ecom.examples.providers.OptionalFieldsProvider;
 import com.wirecard.ecom.examples.providers.PaymentObjectProvider;
 import com.wirecard.ecom.googlepay.model.GooglePayPayment;
-import com.wirecard.ecom.model.AccountHolder;
-import com.wirecard.ecom.model.Address;
-import com.wirecard.ecom.model.CustomerData;
-import com.wirecard.ecom.model.LoyaltyCard;
-import com.wirecard.ecom.model.Notification;
-import com.wirecard.ecom.model.Notifications;
-import com.wirecard.ecom.model.OrderItem;
-import com.wirecard.ecom.model.RequestedAmount;
-import com.wirecard.ecom.model.Shipping;
-import com.wirecard.ecom.model.ShippingMethod;
 import com.wirecard.ecom.model.out.PaymentResponse;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT;
 import static com.wirecard.ecom.examples.Constants.URL_EE_TEST;

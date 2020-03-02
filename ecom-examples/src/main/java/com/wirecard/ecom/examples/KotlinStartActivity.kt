@@ -3,8 +3,8 @@ package com.wirecard.ecom.examples
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -93,8 +93,10 @@ class KotlinStartActivity : AppCompatActivity() {
         startActivityForResult(Intent(this, GooglePayActivity::class.java), GOOGLE_PAY_ACTIVITY_REQUEST_CODE)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        data ?: return
 
         if (requestCode == GOOGLE_PAY_ACTIVITY_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {

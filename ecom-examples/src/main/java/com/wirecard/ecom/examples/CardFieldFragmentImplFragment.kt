@@ -1,7 +1,7 @@
 package com.wirecard.ecom.examples
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import com.wirecard.ecom.Client
-import com.wirecard.ecom.card.AnimatedCardFieldFragment
 import com.wirecard.ecom.card.CardFieldFragment
 import com.wirecard.ecom.examples.Constants.REQUEST_TIMEOUT
 import com.wirecard.ecom.examples.Constants.URL_EE_TEST
@@ -21,7 +20,6 @@ import com.wirecard.ecom.util.Observer
 class CardFieldFragmentImplFragment: Fragment(), Observer<PaymentResponse> {
 
     private val mPaymentObjectProvider = PaymentObjectProvider(OptionalFieldsProvider())
-    private var cardFieldFragment: CardFieldFragment? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_card_field, container, false)
@@ -30,10 +28,9 @@ class CardFieldFragmentImplFragment: Fragment(), Observer<PaymentResponse> {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        cardFieldFragment = CardFieldFragment.Builder()
+        val cardFieldFragment = CardFieldFragment.Builder()
                 .setRequireManualCardBrandSelection(true)
                 .build()
-
 
         activity?.supportFragmentManager
                 ?.beginTransaction()
@@ -41,12 +38,12 @@ class CardFieldFragmentImplFragment: Fragment(), Observer<PaymentResponse> {
                 ?.commit()
 
         cardFieldFragment
-                ?.getEventObserver()
-                ?.subscribe { state -> Log.i("event", state.toString()) }
+                .getEventObserver()
+                .subscribe { state -> Log.i("event", state.toString()) }
 
         activity?.findViewById<Button>(R.id.button_submit)?.setOnClickListener {
-            if (cardFieldFragment?.getCardBundle() != null) {
-                Client(this, URL_EE_TEST, REQUEST_TIMEOUT).startPayment(mPaymentObjectProvider.getCardFormPayment(cardFieldFragment!!.getCardBundle()))
+            if (cardFieldFragment.getCardBundle() != null) {
+                Client(this, URL_EE_TEST, REQUEST_TIMEOUT).startPayment(mPaymentObjectProvider.getCardFormPayment(cardFieldFragment.getCardBundle()))
                 activity?.findViewById<View>(R.id.progress)?.visibility = View.VISIBLE
             } else {
                 Toast.makeText(context, "Card bundle is null!", Toast.LENGTH_SHORT).show()
