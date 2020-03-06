@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 
 import javax.crypto.Mac;
@@ -20,10 +21,10 @@ public class SignatureHelper {
     public static String generateTimestamp() {
         TimeZone timeZone = TimeZone.getTimeZone("UTC");
         Calendar calendar = Calendar.getInstance(timeZone);
-        return new StringBuilder(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.ENGLISH)
-                .format(calendar.getTime()))
-                .insert(22, ":")
-                .toString();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH);
+        simpleDateFormat.setTimeZone(timeZone);
+        
+        return simpleDateFormat.format(calendar.getTime());
     }
 
     /**
