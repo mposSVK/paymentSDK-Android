@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KlarnaPayment - klarna</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">klarna</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.klarna.model</a>&nbsp;/&nbsp;<a href="./index.html">KlarnaPayment</a><br/>
+<br/>
+<h1>KlarnaPayment</h1>
+<code><span class="keyword">class </span><span class="identifier">KlarnaPayment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.3.0/core/com.wirecard.ecom.model/-base-payment/index.html"><span class="identifier">BasePayment</span></a></code>
+<p>Klarna payment</p>
+<h3>Parameters</h3>
+<p><a name="signature"></a>
+<code>signature</code> - Authorize client to process the transaction.</p>
+<p><a name="requestId"></a>
+<code>requestId</code> - Unique identifier associated with the transaction, which is created by the merchant.</p>
+<p><a name="merchantAccountId"></a>
+<code>merchantAccountId</code> - Unique identifier assigned for every Merchant Account.</p>
+<p><a name="transactionType"></a>
+<code>transactionType</code> - Determines transaction processing behaviour.</p>
+<p><a name="amount"></a>
+<code>amount</code> - The only amount that accompanies the transaction when it is created and/or requested.</p>
+<p><a name="currency"></a>
+<code>currency</code> - Currency in which the transaction is processed.</p>
+<p><a name="category"></a>
+<code>category</code> - Klarna category, object of <a href="../-category/index.html">Category</a></p>
+<p><a name="country"></a>
+<code>country</code> - Country code of country where klarna payment is used</p>
+<p><a name="locale"></a>
+<code>locale</code> - Locale</p>
+<p><a name="orderItems"></a>
+<code>orderItems</code> - Order items, ArrayList of objects <a href="https://wirecard.github.io/paymentSDK-Android/api/4.3.0/core/com.wirecard.ecom.model/-order-item/index.html">OrderItem</a></p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.3.0/core/com.wirecard.ecom.model/-base-payment/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&gt;</span></code>
+<p>Payment object class builder</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">KlarnaPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/requestId">requestId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.3.0/core/com.wirecard.ecom.model/-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/category">category</span><span class="symbol">:</span>&nbsp;<a href="../-category/index.html"><span class="identifier">Category</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/country">country</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/locale">locale</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.klarna.model.KlarnaPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.klarna.model.Category, kotlin.String, kotlin.String, java.util.ArrayList((com.wirecard.ecom.model.OrderItem)))/orderItems">orderItems</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://wirecard.github.io/paymentSDK-Android/api/4.3.0/core/com.wirecard.ecom.model/-order-item/index.html"><span class="identifier">OrderItem</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Creates KlarnaPayment.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="category.html">category</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">category</span><span class="symbol">: </span><a href="../-category/index.html"><span class="identifier">Category</span></a></code>
+<p>Klarna category, object of <a href="../-category/index.html">Category</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="country.html">country</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">country</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Country code of country where klarna payment is used</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Gift - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">Gift</a><br/>
+<br/>
+<h1>Gift</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Gift</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<h3>Parameters</h3>
+<p><a name="amount"></a>
+<code>amount</code> - For prepaid or gift card purchase, the purchase amount total of prepaid or gift card(s) in major units (for example, USD 123.45 is 123).</p>
+<p><a name="amount"></a>
+<code>amount</code> - For prepaid or gift card purchase, the currency code of the card as defined in ISO 4217 except 955 - 964 and 999.</p>
+<p><a name="cardCount"></a>
+<code>cardCount</code> - For prepaid or gift card purchase, total count of individual prepaid or gift cards/codes purchased. Field is limited to 2 characters.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Gift</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.model.Gift$<init>(com.wirecard.ecom.model.RequestedAmount, kotlin.Int)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="../-requested-amount/index.html"><span class="identifier">RequestedAmount</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.model.Gift$<init>(com.wirecard.ecom.model.RequestedAmount, kotlin.Int)/cardCount">cardCount</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="amount.html">amount</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">amount</span><span class="symbol">: </span><a href="../-requested-amount/index.html"><span class="identifier">RequestedAmount</span></a></code>
+<p>For prepaid or gift card purchase, the purchase amount total of prepaid or gift card(s) in major units (for example, USD 123.45 is 123).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card-count.html">cardCount</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">cardCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>For prepaid or gift card purchase, total count of individual prepaid or gift cards/codes purchased. Field is limited to 2 characters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
