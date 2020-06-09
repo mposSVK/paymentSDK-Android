@@ -23,7 +23,7 @@ public class SignatureHelper {
         Calendar calendar = Calendar.getInstance(timeZone);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH);
         simpleDateFormat.setTimeZone(timeZone);
-        
+
         return simpleDateFormat.format(calendar.getTime());
     }
 

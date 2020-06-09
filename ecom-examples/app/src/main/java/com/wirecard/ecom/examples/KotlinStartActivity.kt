@@ -93,6 +93,11 @@ class KotlinStartActivity : AppCompatActivity() {
         startActivityForResult(Intent(this, GooglePayActivity::class.java), GOOGLE_PAY_ACTIVITY_REQUEST_CODE)
     }
 
+    fun makeKlarnaPayment(view: View?) {
+        Client(mContext, URL_EE_TEST)
+                .startPayment(mPaymentObjectProvider.klarnaPayment)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

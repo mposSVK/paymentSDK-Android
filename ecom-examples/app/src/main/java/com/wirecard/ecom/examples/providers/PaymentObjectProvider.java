@@ -6,11 +6,16 @@ import com.wirecard.ecom.card.model.CardFieldPayment;
 import com.wirecard.ecom.card.model.CardPayment;
 import com.wirecard.ecom.examples.SignatureHelper;
 import com.wirecard.ecom.googlepay.model.GooglePayPayment;
+import com.wirecard.ecom.klarna.model.Category;
+import com.wirecard.ecom.klarna.model.KlarnaPayment;
 import com.wirecard.ecom.model.AccountHolder;
 import com.wirecard.ecom.model.Card;
 import com.wirecard.ecom.model.CardToken;
 import com.wirecard.ecom.model.Notification;
 import com.wirecard.ecom.model.Notifications;
+import com.wirecard.ecom.model.OrderItem;
+import com.wirecard.ecom.model.OrderItemType;
+import com.wirecard.ecom.model.RequestedAmount;
 import com.wirecard.ecom.model.TransactionType;
 import com.wirecard.ecom.paypal.model.PayPalPayment;
 import com.wirecard.ecom.sepa.model.SepaPayment;
@@ -219,6 +224,41 @@ public class PaymentObjectProvider {
                 .build();
 
         return googlePayPayment;
+    }
+
+    public KlarnaPayment getKlarnaPayment(){
+        String timestamp = SignatureHelper.generateTimestamp();
+        String requestId = UUID.randomUUID().toString();
+        String merchantId = "f570c123-62f1-4a0d-8688-d999a05d50d4";
+        String secretKey = "0fb50d2c-8ab5-4d53-ac69-b707b1319148";
+        TransactionType transactionType = TransactionType.AUTHORIZATION;
+        BigDecimal amount = new BigDecimal(5);
+        String currency = "EUR";
+        String signature = SignatureHelper.generateSignature(timestamp, merchantId, requestId, transactionType.getValue(), amount, currency, secretKey);
+
+        ArrayList<OrderItem> orderItems = new ArrayList<>();
+        OrderItem orderItem = new OrderItem();
+        orderItem.setQuantity(1);
+        orderItem.setName("Test item");
+        orderItem.setType(OrderItemType.SHIPMENT_FEE);
+        orderItem.setAmount(new RequestedAmount(amount, currency));
+
+        orderItems.add(orderItem);
+
+        KlarnaPayment klarnaPayment = new KlarnaPayment.Builder()
+                .setSignature(signature)
+                .setMerchantAccountId(merchantId)
+                .setRequestId(requestId)
+                .setTransactionType(transactionType)
+                .setAmount(amount)
+                .setCurrency(currency)
+                .setCountry("AT")
+                .setLocale("EN")
+                .setCategory(Category.KLARNA_PAY_LATER)
+                .setOrderItems(orderItems)
+                .build();
+
+        return klarnaPayment;
     }
 
     public GooglePayPayment getGooglePayPayment(){

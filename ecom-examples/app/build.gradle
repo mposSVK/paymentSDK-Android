@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+ext {
+    wirecardEcomLibraryVersion = "4.3.0"
+}
+
+android {
+    compileSdkVersion 29
+
+
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.wirecard.ecom.examples"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+
+    productFlavors {
+        normal {
+        }
+        themedLight {
+            applicationId "com.wirecard.ecom.examples.themedLight"
+        }
+        themedDark {
+            applicationId "com.wirecard.ecom.examples.themedDark"
+        }
+    }
+}
+
+repositories {
+    maven {
+        url  "https://dl.bintray.com/wirecard/ecom-android"
+    }
+    maven {
+        url 'https://x.klarnacdn.net/mobile-sdk/'
+    }
+//    mavenLocal()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+
+    implementation "com.wirecard.ecom:card:$wirecardEcomLibraryVersion"
+    implementation "com.wirecard.ecom:sepa:$wirecardEcomLibraryVersion"
+    implementation "com.wirecard.ecom:zapp:$wirecardEcomLibraryVersion"
+    implementation "com.wirecard.ecom:paypal:$wirecardEcomLibraryVersion"
+    implementation "com.wirecard.ecom:google-pay:$wirecardEcomLibraryVersion"
+    implementation "com.wirecard.ecom:klarna:$wirecardEcomLibraryVersion"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

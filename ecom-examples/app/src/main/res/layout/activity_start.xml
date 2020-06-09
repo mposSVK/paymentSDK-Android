@@ -97,6 +97,13 @@
         android:text="GooglePay payment - merchant managed" />
 
     <Button
+        android:id="@+id/button_klarna_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="makeKlarnaPayment"
+        android:text="Klarna payment" />
+
+    <Button
         android:id="@+id/button_optional_parameters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
