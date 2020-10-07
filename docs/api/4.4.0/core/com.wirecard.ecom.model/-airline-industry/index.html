@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AirlineIndustry - core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.model</a>&nbsp;/&nbsp;<a href="./index.html">AirlineIndustry</a><br/>
+<br/>
+<h1>AirlineIndustry</h1>
+<code><span class="keyword">class </span><span class="identifier">AirlineIndustry</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Airline industry</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AirlineIndustry</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Airline industry</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="agent-code.html">agentCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">agentCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The agency code assigned by IATA.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="agent-name.html">agentName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">agentName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The agency name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="airline-code.html">airlineCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">airlineCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The airline code assigned by IATA.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="airline-name.html">airlineName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">airlineName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Name of the airline.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="itinerary.html">itinerary</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">itinerary</span><span class="symbol">: </span><a href="../-itinerary/index.html"><span class="identifier">Itinerary</span></a><span class="symbol">?</span></code>
+<p>Itinerary</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="non-taxable-net-amount.html">nonTaxableNetAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">nonTaxableNetAmount</span><span class="symbol">: </span><a href="../-non-taxable-net-amount/index.html"><span class="identifier">NonTaxableNetAmount</span></a><span class="symbol">?</span></code>
+<p>This field must contain the net amount of the purchase transaction in the specified currency for which the tax is levied. Two decimal places are implied. If this field contains a value greater than zero, the indicated value must differ to the content of the transaction amount.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="number-of-passengers.html">numberOfPassengers</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">numberOfPassengers</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The number of passengers on the airline transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="passenger-code.html">passengerCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passengerCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The file key of the passenger name record (PNR). This information is mandatory for transactions with AirPlus UATP cards.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="passenger-email.html">passengerEmail</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passengerEmail</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The email address of the airline transaction passenger.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="passenger-ip-address.html">passengerIpAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passengerIpAddress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The IP address of the airline transaction passenger.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="passenger-name.html">passengerName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passengerName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The name of the airline transaction passenger.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="passenger-phone.html">passengerPhone</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">passengerPhone</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The phone number of the airline transaction passenger.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pnr-file-key.html">pnrFileKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pnrFileKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The passenger name File id for the airline transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reservation-code.html">reservationCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reservationCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The reservation code of the airline Transaction passenger.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ticket-check-digit.html">ticketCheckDigit</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ticketCheckDigit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The airline ticket check digit.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ticket-issue-date.html">ticketIssueDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ticketIssueDate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The date the ticket was issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ticket-issuer.html">ticketIssuer</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ticketIssuer</span><span class="symbol">: </span><a href="../-ticket-issuer/index.html"><span class="identifier">TicketIssuer</span></a><span class="symbol">?</span></code>
+<p>Ticket issuer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ticket-number.html">ticketNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ticketNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The airline ticket number, including the check digit. If no airline ticket number (IATA) is used, the element field must be populated with 99999999999.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ticket-restricted-flag.html">ticketRestrictedFlag</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ticketRestrictedFlag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Indicates that the airline transaction is restricted. 0 = No restriction, 1 = Restricted (non-refundable).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

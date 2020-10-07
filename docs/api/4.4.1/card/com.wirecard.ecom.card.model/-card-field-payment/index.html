@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CardFieldPayment - card</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">card</a>&nbsp;/&nbsp;<a href="../index.html">com.wirecard.ecom.card.model</a>&nbsp;/&nbsp;<a href="./index.html">CardFieldPayment</a><br/>
+<br/>
+<h1>CardFieldPayment</h1>
+<code><span class="keyword">class </span><span class="identifier">CardFieldPayment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.4.1/core/com.wirecard.ecom.model/-base-payment/index.html"><span class="identifier">BasePayment</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<p>Card field payment object</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.4.1/core/com.wirecard.ecom.model/-base-payment/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&gt;</span></code>
+<p>Builder class for Card field payment</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CardFieldPayment</span><span class="symbol">(</span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/signature">signature</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/merchantAccountId">merchantAccountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/transactionType">transactionType</span><span class="symbol">:</span>&nbsp;<a href="https://wirecard.github.io/paymentSDK-Android/api/4.4.1/core/com.wirecard.ecom.model/-transaction-type/index.html"><span class="identifier">TransactionType</span></a><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.wirecard.ecom.card.model.CardFieldPayment$<init>(kotlin.String, kotlin.String, kotlin.String, com.wirecard.ecom.model.TransactionType, java.math.BigDecimal, kotlin.String, com.wirecard.ecom.card.model.CardBundle)/cardBundle">cardBundle</span><span class="symbol">:</span>&nbsp;<a href="../-card-bundle/index.html"><span class="identifier">CardBundle</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="attempt3d.html">attempt3d</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">attempt3d</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Indicates that the Transaction Request should proceed with the 3D Secure workflow if the <a href="#">Card Holder</a> is enrolled. Otherwise, the transaction proceeds without 3D Secure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="card-bundle.html">cardBundle</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cardBundle</span><span class="symbol">: </span><a href="../-card-bundle/index.html"><span class="identifier">CardBundle</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="card-token.html">cardToken</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cardToken</span><span class="symbol">: </span><a href="https://wirecard.github.io/paymentSDK-Android/api/4.4.1/core/com.wirecard.ecom.model/-card-token/index.html"><span class="identifier">CardToken</span></a><span class="symbol">?</span></code>
+<p>Tokenized card data gathered by previous transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="payment-action.html">paymentAction</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">paymentAction</span><span class="symbol">: </span><span class="identifier">PaymentAction</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="periodic.html">periodic</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">periodic</span><span class="symbol">: </span><a href="https://wirecard.github.io/paymentSDK-Android/api/4.4.1/core/com.wirecard.ecom.model/-periodic/index.html"><span class="identifier">Periodic</span></a><span class="symbol">?</span></code>
+<p>It describes recurring transactions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="recurring.html">recurring</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">recurring</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Mark payment as recurring.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="require-security-code.html">requireSecurityCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requireSecurityCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Force user to enter security code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sub-merchant-info.html">subMerchantInfo</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">subMerchantInfo</span><span class="symbol">: </span><a href="../-sub-merchant-info/index.html"><span class="identifier">SubMerchantInfo</span></a><span class="symbol">?</span></code>
+<p>Sub Merchant Info</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="three-d-version.html">threeDVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">threeDVersion</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Sets 3DS version e.g. 1.0 or 2.1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="token-usage-indicator.html">tokenUsageIndicator</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">tokenUsageIndicator</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Used to signalize card token usage</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
